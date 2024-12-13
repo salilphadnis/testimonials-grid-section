@@ -11,70 +11,79 @@
 
   <style>
 
+    /*Remove default padding and margin*/
     * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
       }
 
-    /*Defaults*/
+    /*Add Defaults*/
     body {
       font-family: "Barlow Semi Condensed", sans-serif;;
     }
 
-    p {
+    /*Style for the container holding all the cards*/
+    /*Place in the cente by margin auto on left and right*/
+    .card-container {
+      max-width: 21rem;
+      margin: 5rem auto 2rem auto; /*top right bottom left */
+    }
+
+    .card {
+      padding: 1.5rem 2.1rem; 
+      border-radius: 0.7rem;
+    }
+
+    /*author's image */
+    header > img {
+      border-radius: 50%;
+      width: 12%;
+      border: 2px solid hsl(263, 62%, 74%);
+    }
+
+    /*The author's name and title are to the right of the image*/
+    .name-title {
+      display: inline-block;
+      margin-left: 1rem;
+      font-size: 13px;
+      max-width:6rem;
+    }
+
+    /*Title is smaller and less opaque*/
+    .name-title span {
+      opacity: 50%;
+      font-size: 11px;
+    }
+
+    /*The first paragraph has the class of intro*/
+    .intro {
+      font-size: 1.3rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+    }
+
+    /*The second paragraph has the class of details*/
+    /*adjust fonts etc so that it matches the design*/
+    .details {
       font-size: 13px;
       line-height: 1.2rem;
       font-weight: 400;
       opacity: 45%;
       letter-spacing: 0.035rem;
     }
-
-    h2 {
-      font-size: 1.3rem;
-      line-height: 1.6rem;
-      font-weight: 500;
-    }
-
-    .card-container {
-      max-width: 20rem;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5rem;
-    }
-
-    .card {
-      padding: 1.6rem;
-      border-radius: 0.7rem;
-    }
-
-    /*First child div of card*/
-    /*First child img of that div*/
-    .card > div > img {
-      border-radius: 50%;
-      width: 80%;
-      border: 2px solid hsl(263, 62%, 74%);
-    }
-
-    .card > h2 {
-      margin-top: 1em;
-    }
-
+    
+    /*Margin at the top of both paragraphs in the card*/
     .card > p {
       margin-top: 1em;
     }
 
-    .card > div {
-      display: grid;
-      grid-template-columns: 1fr 7fr;
-      align-items: center;
-    }
 
+    /*colors for each card*/
     .card1 {
       background-color: hsl(263, 55%, 52%);
       color: white;
     }
-    
 
   </style>
 </head>
@@ -83,17 +92,17 @@
   <div class="card-container">
 
     <div class = "card card1">
-      <div>
+      <header>
         <img src="images/image-daniel.jpg">
-        <div>
-          <p>Daniel Clifford</p>
-          <p>Verified Graduate</p>
+        <div class="name-title">
+          <p>Daniel Clifford <span>Verified Graduate</span></p>
         </div>
-      </div>
-      <h2>
+      </header>
+
+      <p class="intro">
         I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.
-      </h2> 
-      <p>
+      </p> 
+      <p class="details">
        “I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
       </p>
     </div>
