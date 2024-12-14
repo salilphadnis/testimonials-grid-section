@@ -6,108 +6,18 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
 
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <style>
-
-    /*Remove default padding and margin*/
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-    /*Add Defaults*/
-    body {
-      font-family: "Barlow Semi Condensed", sans-serif;
-      background-color: rgb(237,242,248);
-    }
-
-    /*Style for the container holding all the cards*/
-    /*Place in the cente by margin auto on left and right*/
-    .card-container {
-      max-width: 21rem;
-      margin: 5rem auto 2rem auto; /*top right bottom left */
-    }
-
-    .card {
-      padding: 1.5rem 2.1rem 2rem 2.1rem; 
-      border-radius: 0.7rem;
-      background-color: white;
-      color: white;
-      margin-top: 1.5rem;
-    }
-
-        /*Margin at the top of both paragraphs in the card*/
-    .card > p {
-      margin-top: 1em;
-    }
-
-    /*author's image is a small circle */
-    .heading > img {
-      border-radius: 50%;
-      width: 12%;
-      border: 2px solid hsl(263, 62%, 74%);
-    }
-
-    /*The author's name and title are to the right of the image*/
-    .name-title {
-      display: inline-block;
-      margin-left: 1rem;
-      font-size: 13px;
-      max-width:6rem;
-    }
-
-    /*Title is smaller and less opaque*/
-    .name-title span {
-      opacity: 50%;
-      font-size: 11px;
-    }
-
-    /*The first paragraph has the class of intro*/
-    .intro {
-      font-size: 1.3rem;
-      line-height: 1.6rem;
-      font-weight: 500;
-    }
-
-    /*The second paragraph has the class of details*/
-    /*adjust fonts etc so that it matches the design*/
-    .details {
-      font-size: 13px;
-      line-height: 1.2rem;
-      font-weight: 400;
-      opacity: 45%;
-      letter-spacing: 0.035rem;
-    }
-    
-    /*colors for each card*/
-    .card1 {
-      background-color: hsl(263, 55%, 52%);
-    }
-
-    .card2 {
-      background-color: hsl(217, 19%, 35%)
-    }
-
-    .card3,
-    .card5 {
-      color: black;
-    }
-
-    .card4 {
-      background-color: black;
-    }
-
-
-  </style>
 </head>
 <body>
 
   <div class="card-container">
 
-    <div class = "card card1">
+    <div class = "card daniel">
+      <img class="quotes" src="images/bg-pattern-quotation.svg">
       <div class="heading">
         <img src="images/image-daniel.jpg">
         <div class="name-title">
@@ -122,7 +32,7 @@
       </p>
     </div>
     
-    <div class="card card2">
+    <div class="card jonathan">
       <div class="heading">
         <img src="images/image-jonathan.jpg">
         <div class="name-title">
@@ -135,7 +45,7 @@
       </p>
     </div>
   
-    <div class="card card3">
+    <div class="card jeanette">
       <div class="heading">
         <img src="images/image-jeanette.jpg">
         <div class="name-title">
@@ -148,7 +58,7 @@
       </p>
     </div>
   
-    <div class="card card4">
+    <div class="card patrick">
       <div class="heading">
         <img src="images/image-patrick.jpg">
         <div class="name-title">
@@ -162,7 +72,7 @@
       </p>
     </div> 
 
-    <div class="card card5">
+    <div class="card kira">
       <div class="heading">
         <img src="images/image-kira.jpg">
         <div class="name-title">

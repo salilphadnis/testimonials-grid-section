@@ -1,0 +1,137 @@
+
+/*Mobile design is default*/
+
+/*Remove default padding and margin*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+/*Add Defaults*/
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: rgb(237,242,248);
+}
+
+/*Style for the container holding all the cards*/
+/*Place in the cente by margin auto on left and right*/
+.card-container {
+  display: grid;
+  max-width: 21rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin: 5rem auto 2rem auto; /*top right bottom left */
+}
+
+.card {
+  padding: 1.5rem 2.1rem 2rem 2.1rem; 
+  border-radius: 0.7rem;
+  background-color: white;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/*author's image is a small circle */
+.heading > img {
+  border-radius: 50%;
+  width: 2rem;
+  border: 2px solid hsl(263, 62%, 74%);
+}
+
+/*The author's name and title are to the right of the image*/
+.name-title {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 13px;
+  max-width:6rem;
+}
+
+/*Title is smaller and less opaque*/
+.name-title span {
+  opacity: 50%;
+  font-size: 11px;
+}
+
+/*The first paragraph has the class of intro*/
+.intro {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/*The second paragraph has the class of details*/
+/*adjust fonts etc so that it matches the design*/
+.details {
+  font-size: 13px;
+  line-height: 1.2rem;
+  font-weight: 400;
+  opacity: 45%;
+  letter-spacing: 0.035rem;
+  margin-top: 1.5rem;
+}
+    
+/*give the daniel card a z-index of 0 so that the quotes
+image doesn't go behind it*/
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+  position: relative; 
+  z-index: 0;
+}
+
+/*The quote image inside the daniel card needs to be pushed back
+behind the intro paragraph*/
+.quotes {
+  position: absolute;
+  right: 7rem;
+  top: 0;
+  z-index: -1;
+}
+
+.jonathan {
+  background-color: hsl(217, 19%, 35%)
+}
+
+.jeanette,
+.kira {
+  color: black;
+}
+
+.patrick {
+  background-color: black;
+}
+
+/*desktop design*/
+@media (min-width: 768px) {
+
+  /*2 rows, 4 columns*/
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 75rem;
+  }
+
+  /*spread the cards around the grid as shown in the design*/
+  .daniel {
+    grid-column: 1 / 3;
+  }
+
+  .jonathan {
+    grid-column: 3;
+  }
+
+  .jeanette {
+    grid-row: 2;
+  }
+
+  .patrick {
+    grid-column: 2 / 4;
+  }
+
+  .kira {
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+
+}
+
